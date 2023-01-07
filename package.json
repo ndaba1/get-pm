@@ -1,0 +1,24 @@
+{
+  "name": "pacman",
+  "version": "0.0.1",
+  "description": "Detect and abstract away package managers",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Victor Ndaba",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/semver": "^7.3.13",
+    "execa": "^6.1.0",
+    "typescript": "^4.9.4",
+    "unbuild": "^1.0.2"
+  },
+  "dependencies": {
+    "find-up": "^6.3.0",
+    "find-yarn-workspace-root2": "^1.2.49",
+    "semver": "^7.3.8"
+  }
+}
