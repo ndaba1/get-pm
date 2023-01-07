@@ -1,11 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/minimist': ^1.2.2
   '@types/node': ^18.11.18
   '@types/semver': ^7.3.13
   execa: ^6.1.0
   find-up: ^6.3.0
   find-yarn-workspace-root2: ^1.2.49
+  minimist: ^1.2.7
   semver: ^7.3.8
   typescript: ^4.9.4
   unbuild: ^1.0.2
@@ -16,9 +18,11 @@ dependencies:
   semver: 7.3.8
 
 devDependencies:
+  '@types/minimist': 1.2.2
   '@types/node': 18.11.18
   '@types/semver': 7.3.13
   execa: 6.1.0
+  minimist: 1.2.7
   typescript: 4.9.4
   unbuild: 1.0.2
 
@@ -401,6 +405,10 @@ packages:
 
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
+
+  /@types/minimist/1.2.2:
+    resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
   /@types/node/18.11.18:
@@ -1113,6 +1121,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
+    dev: true
+
+  /minimist/1.2.7:
+    resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
     dev: true
 
   /mkdirp/1.0.4:
