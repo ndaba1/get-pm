@@ -3,7 +3,7 @@
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
