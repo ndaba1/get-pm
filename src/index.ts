@@ -46,29 +46,33 @@ export class PackageManager {
     return this.#version;
   }
 
-  async run(script: string) {
+  async run(script: string, opts?: string[]) {
     // run script with package manager
-    await execa(this.#name, ["run", script], this.#getExecOptions());
+    await execa(
+      this.#name,
+      [opts, "run", script],
+      this.#getExecOptions()
+    );
   }
 
-  async add(deps: string[]) {
+  async add(deps: string[], opts?: string[]) {
     // install deps
-    await execa(this.#name, ["add", ...deps], this.#getExecOptions());
+    await execa(this.#name, [opts, "add", ...deps], this.#getExecOptions());
   }
 
-  async install() {
+  async install(opts?: string[]) {
     // install deps
-    await execa(this.#name, ["install"], this.#getExecOptions());
+    await execa(this.#name, [opts, "install"], this.#getExecOptions());
   }
 
-  async remove(deps: string[]) {
+  async remove(deps: string[], opts?: string[]) {
     // remove deps
-    await execa(this.#name, ["remove", ...deps], this.#getExecOptions());
+    await execa(this.#name, [opts, "remove", ...deps], this.#getExecOptions());
   }
 
-  async upgrade(deps: string[]) {
+  async upgrade(deps: string[], opts?: string[]) {
     // upgrade deps
-    await execa(this.#name, ["upgrade", ...deps], this.#getExecOptions());
+    await execa(this.#name, [opts, "upgrade", ...deps], this.#getExecOptions());
   }
 
   async exec(cmd: string, args: string[]) {
@@ -86,13 +90,13 @@ export class PackageManager {
 
   #getExecutable() {
     const mapping = {
-        npm: "npx",
-        yarn: "yarn exec",
-        pnpm: "pnpx",
-    }
+      npm: "npx",
+      yarn: "yarn exec",
+      pnpm: "pnpx",
+    };
 
     // @ts-ignore
-    return mapping[this.#name] || "npx"
+    return mapping[this.#name] || "npx";
   }
 }
 
