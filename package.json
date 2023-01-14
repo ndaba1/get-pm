@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc"
   },
-  "keywords": [],
+  "files": ["dist/", "README.md", "LICENSE"],
+  "keywords": ["pacman", "which-pm", "which-pm-runs", "preferred-pm", "package-manager", "pm"],
   "author": "Victor Ndaba",
   "license": "ISC",
   "devDependencies": {
