@@ -27,6 +27,7 @@
   "author": "Victor Ndaba",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.11.18",
     "@types/semver": "^7.3.13",
