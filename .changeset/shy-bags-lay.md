@@ -1,5 +1,5 @@
 ---
-"pacman": patch
+"get-pm": patch
 ---
 
 initial pkg version

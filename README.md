@@ -1,4 +1,4 @@
-## pacman
+## get-pm
 Detect and abstract away package managers in JS/TS codebases
 
 ### Why?
@@ -15,7 +15,7 @@ Right about now, you might be thinking "Why not use [which-pm](https://github.co
 
 ### Usage
 ```ts
-import { getPackageManager } from 'pacman';
+import { getPackageManager } from 'get-pm';
 
 const pm = getPackageManager({
     prefer: ['pnpm', 'yarn'], // optional - if multiple found, prefer these
@@ -47,11 +47,11 @@ await pm.exec('tailwindcss', ['init', '-p']);
 ```
 
 ## Usage with commonjs
-The pacman package is an esm module which cannot be used with the default `require` syntax in commonjs. To use it with cjs, you will have to use the `import` syntax as shown below:
+The get-pm package is an esm module which cannot be used with the default `require` syntax in commonjs. To use it with cjs, you will have to use the `import` syntax as shown below:
 
 ```ts
 async function getPm() {
-    const { getPackageManager } = await import("pacman")
+    const { getPackageManager } = await import("get-pm")
     const pm = getPackageManager();
 
     return pm

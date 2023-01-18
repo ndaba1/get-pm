@@ -1,5 +1,5 @@
 {
-  "name": "pacman",
+  "name": "get-pm",
   "version": "0.0.0",
   "description": "Detect and abstract away package managers",
   "main": "dist/index.js",
