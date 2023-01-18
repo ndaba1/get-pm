@@ -2,13 +2,14 @@
   "name": "pacman",
   "version": "0.0.1",
   "description": "Detect and abstract away package managers",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "type": "module",
   "bin": {
-    "get-pm": "dist/bin.js"
+    "get-pm": "dist/bin.mjs"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "unbuild",
     "lint": "tsc"
   },
   "files": [
