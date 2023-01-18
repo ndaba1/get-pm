@@ -46,5 +46,18 @@ await pm.run('build');
 await pm.exec('tailwindcss', ['init', '-p']);
 ```
 
+## Usage with commonjs
+The pacman package is an esm module which cannot be used with the default `require` syntax in commonjs. To use it with cjs, you will have to use the `import` syntax as shown below:
+
+```ts
+async function getPm() {
+    const { getPackageManager } = await import("pacman")
+    const pm = getPackageManager();
+
+    return pm
+}
+
+```
+
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
