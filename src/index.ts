@@ -46,33 +46,33 @@ export class PackageManager {
     return this.#version;
   }
 
-  async run(script: string, opts?: string[]) {
+  async run(script: string, opts: string[] = []) {
     // run script with package manager
     await execa(
       this.#name,
-      [opts, "run", script],
+      [...opts, "run", script],
       this.#getExecOptions()
     );
   }
 
-  async add(deps: string[], opts?: string[]) {
+  async add(deps: string[], opts: string[] = []) {
     // install deps
-    await execa(this.#name, [opts, "add", ...deps], this.#getExecOptions());
+    await execa(this.#name, [...opts, "add", ...deps], this.#getExecOptions());
   }
 
-  async install(opts?: string[]) {
+  async install(opts: string[] = []) {
     // install deps
-    await execa(this.#name, [opts, "install"], this.#getExecOptions());
+    await execa(this.#name, [...opts, "install"], this.#getExecOptions());
   }
 
-  async remove(deps: string[], opts?: string[]) {
+  async remove(deps: string[], opts: string[] = []) {
     // remove deps
-    await execa(this.#name, [opts, "remove", ...deps], this.#getExecOptions());
+    await execa(this.#name, [...opts, "remove", ...deps], this.#getExecOptions());
   }
 
-  async upgrade(deps: string[], opts?: string[]) {
+  async upgrade(deps: string[], opts: string[] = []) {
     // upgrade deps
-    await execa(this.#name, [opts, "upgrade", ...deps], this.#getExecOptions());
+    await execa(this.#name, [...opts, "upgrade", ...deps], this.#getExecOptions());
   }
 
   async exec(cmd: string, args: string[]) {
