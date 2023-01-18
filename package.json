@@ -2,7 +2,7 @@
   "name": "pacman",
   "version": "0.0.1",
   "description": "Detect and abstract away package managers",
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
