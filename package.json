@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup src/index.ts --format esm --dts",
     "lint": "tsc"
   },
   "files": [
@@ -29,6 +29,7 @@
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.11.18",
     "@types/semver": "^7.3.13",
+    "tsup": "^6.5.0",
     "typescript": "^4.9.4",
     "unbuild": "^1.1.1"
   },
